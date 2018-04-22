@@ -15,5 +15,8 @@ let package = Package(
         .target(
             name: "Bootstrap",
             dependencies: [  ]),
+        .testTarget(
+            name: "BootstrapTests",
+            dependencies: [ "Bootstrap" ])
     ]
 )

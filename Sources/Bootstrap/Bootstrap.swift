@@ -11,12 +11,12 @@ public extension Bootstrap {
 public class Bootstrap {
     private init() {  }
 
-    public func bootstrap(_ procedures: [BootstrapProcedure], delegatingTo delegate: BootstrapResultsDelegate) {
-        let bootstrapQueue = DispatchQueue(label: "com.isaac-weisberg.bootstrap", qos: .userInitiated, attributes: [ .concurrent ])
+    public func bootstrap(_ procedures: [Procedure], delegatingTo delegate: BootstrapDelegate) {
+        let bootstrapQueue = DispatchQueue(label: "com.isaac-weisberg.bootstrap", qos: .userInteractive, attributes: [ .concurrent ])
         let group = DispatchGroup()
 
         procedures.forEach { procedure in
-            let manager = BootstrapProcedureManager()
+            let manager = ProcedureManager()
 
             manager.successHandler = {
                 group.leave()

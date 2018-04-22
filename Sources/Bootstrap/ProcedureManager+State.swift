@@ -1,4 +1,4 @@
-internal extension BootstrapProcedureManager {
+internal extension ProcedureManager {
     internal enum State {
         case pending
         case succeeded

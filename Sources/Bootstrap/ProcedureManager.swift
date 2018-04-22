@@ -1,4 +1,4 @@
-public class BootstrapProcedureManager {
+public class ProcedureManager {
     internal var state: State = .pending
     internal var successHandler: (() -> Void)?
     internal var failureHandler: ((Error?) -> Void)?
@@ -11,6 +11,7 @@ public class BootstrapProcedureManager {
         guard state.isPending else {
             return
         }
+
         successHandler?()
     }
 
