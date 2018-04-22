@@ -9,7 +9,8 @@ class BasicUsageTest: XCTestCase, BootstrapDelegate {
 
         Bootstrap.shared.bootstrap([
             ProcedureQuick(),
-            ProcedureABitLonger()
+            ProcedureABitLonger(),
+            ProcedureKindaLong()
         ], delegatingTo: self)
 
         waitForExpectations(timeout: 20.0)

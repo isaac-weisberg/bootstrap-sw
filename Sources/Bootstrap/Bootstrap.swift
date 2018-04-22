@@ -29,7 +29,7 @@ public class Bootstrap {
 
             group.enter()
             bootstrapQueue.async {
-                procedure.initiated(with: manager)
+                procedure.initiate(with: manager)
             }
         }
 

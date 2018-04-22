@@ -4,7 +4,7 @@ import Bootstrap
 #endif
 
 class ProcedureABitLonger: Procedure {
-    func initiated(with manager: ProcedureManager) {
+    func initiate(with manager: ProcedureManager) {
         DispatchQueue.global(qos: .userInitiated).async {
             print("The 'ASDF Super Deluxe' framework is fully initiated.")
             manager.succeed()
