@@ -25,6 +25,7 @@ public class Bootstrap {
                 if delegate.shouldFatalOut(with: procedure, managedBy: manager, failingWith: error) {
                     fatalError("Death by bootstrap with \(procedure) managedBy \(manager) because of \(String(describing: error))")
                 }
+                group.leave()
             }
 
             group.enter()
