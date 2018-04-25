@@ -1,7 +1,5 @@
 import Bootstrap
-#if os(Linux)
-    import Dispatch
-#endif
+import Dispatch
 
 class ProcedureABitLonger: Procedure {
     func initiate(with manager: ProcedureManager) {

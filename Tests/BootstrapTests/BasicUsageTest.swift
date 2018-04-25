@@ -25,7 +25,9 @@ class BasicUsageTest: XCTestCase, BootstrapDelegate {
         return false
     }
 
+    #if os(Linux)
     static let allTests = [
         ("testBasicUsage", testBasicUsage)
     ]
+    #endif
 }
